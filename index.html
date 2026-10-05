@@ -1,0 +1,2160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUNA STORE | Modern Fashion3</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000000'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='white' font-family='Arial'%3EL%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+    <!-- =========================
+         ANNOUNCEMENT BAR
+    ========================== -->
+
+    <div class="announcement">
+        Free shipping on orders over 600 DH
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">LUNA</a>
+
+        <nav class="main-nav">
+
+            <div class="nav-shop">
+
+                <button class="nav-link shop-trigger">
+                    Shop
+                    <span>⌄</span>
+                </button>
+
+                <div class="mega-menu">
+
+                    <div class="mega-column">
+
+                        <p class="mega-title">CLOTHING</p>
+
+                        <a href="#shop" onclick="filterProducts('Dresses')">
+                            Dresses
+                        </a>
+
+                        <a href="#shop" onclick="filterProducts('Tops')">
+                            Tops
+                        </a>
+
+                        <a href="#shop" onclick="filterProducts('Jeans')">
+                            Jeans
+                        </a>
+
+                        <a href="#shop" onclick="filterProducts('Jackets')">
+                            Jackets
+                        </a>
+
+                    </div>
+
+
+                    <div class="mega-column">
+
+                        <p class="mega-title">SHOES & BAGS</p>
+
+                        <a href="#shop" onclick="filterProducts('Shoes')">
+                            Shoes
+                        </a>
+
+                        <a href="#shop" onclick="filterProducts('Bags')">
+                            Bags
+                        </a>
+
+                    </div>
+
+
+                    <div class="mega-column">
+
+                        <p class="mega-title">ACCESSORIES</p>
+
+                        <a href="#shop" onclick="filterProducts('Accessories')">
+                            Accessories
+                        </a>
+
+                        <a href="#shop" onclick="filterProducts('All')">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="mega-feature">
+
+                        <span>NEW SEASON</span>
+
+                        <strong>Discover<br>the latest edit.</strong>
+
+                        <a href="#new">Explore →</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="#new" class="nav-link">
+                New Arrivals
+            </a>
+
+            <a href="#bestsellers" class="nav-link">
+                Best Sellers
+            </a>
+
+            <a href="#sale" class="nav-link sale-link">
+                Sale
+            </a>
+
+            <a href="#contact" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="mobile-menu-button"
+                onclick="toggleMobileMenu()"
+                aria-label="Open menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <button
+                class="nav-icon"
+                onclick="openSearch()"
+                aria-label="Search">
+                ⌕
+            </button>
+
+            <button
+                class="nav-icon"
+                onclick="openWishlist()"
+                aria-label="Wishlist">
+                ♡
+            </button>
+
+            <button
+                class="nav-icon"
+                onclick="openAccount()"
+                aria-label="Account">
+                ♙
+            </button>
+
+            <button
+                class="bag-button"
+                onclick="openCart()">
+
+                Bag
+
+                <span id="cart-count">0</span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MOBILE MENU
+    ========================== -->
+
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+
+        <div class="mobile-menu-header">
+            <span>MENU</span>
+            <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close menu">×</button>
+        </div>
+
+        <nav class="mobile-menu-nav">
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#shop" onclick="filterProducts('All'); closeMobileMenu()">Shop</a>
+
+            <p class="mobile-menu-title">CATEGORIES</p>
+            <a href="#shop" onclick="filterProducts('Dresses'); closeMobileMenu()">Dresses</a>
+            <a href="#shop" onclick="filterProducts('Tops'); closeMobileMenu()">Tops</a>
+            <a href="#shop" onclick="filterProducts('Jeans'); closeMobileMenu()">Jeans</a>
+            <a href="#shop" onclick="filterProducts('Jackets'); closeMobileMenu()">Jackets</a>
+            <a href="#shop" onclick="filterProducts('Shoes'); closeMobileMenu()">Shoes</a>
+            <a href="#shop" onclick="filterProducts('Bags'); closeMobileMenu()">Bags</a>
+            <a href="#shop" onclick="filterProducts('Accessories'); closeMobileMenu()">Accessories</a>
+
+            <p class="mobile-menu-title">DISCOVER</p>
+            <a href="#new" onclick="closeMobileMenu()">New Arrivals</a>
+            <a href="#bestsellers" onclick="closeMobileMenu()">Best Sellers</a>
+            <a href="#sale" onclick="closeMobileMenu()">Sale</a>
+            <a href="#about" onclick="closeMobileMenu()">About</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact Us</a>
+        </nav>
+
+    </div>
+
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    FALL / WINTER 2026
+                </p>
+
+                <h1>
+                    Your style.<br>
+                    Your story.
+                </h1>
+
+                <p class="hero-text">
+                    Discover modern fashion designed
+                    for every version of you.
+                </p>
+
+                <a
+                    href="#shop"
+                    class="btn btn-light">
+
+                    Shop Collection
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SHOP BY CATEGORY
+        ========================== -->
+
+        <section class="categories-section">
+
+            <div class="section-header category-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        EXPLORE
+                    </p>
+
+                    <h2>
+                        Shop by category
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#shop"
+                    class="text-link"
+                    onclick="filterProducts('All')">
+
+                    View all →
+
+                </a>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a
+                    href="#shop"
+                    class="category-card category-large"
+                    onclick="filterProducts('Dresses')">
+
+                    <div class="category-image dresses-image"></div>
+
+                    <div class="category-overlay">
+
+                        <span>DRESSES</span>
+
+                        <strong>
+                            Explore collection →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#shop"
+                    class="category-card"
+                    onclick="filterProducts('Tops')">
+
+                    <div class="category-image tops-image"></div>
+
+                    <div class="category-overlay">
+
+                        <span>TOPS</span>
+
+                        <strong>
+                            Explore →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#shop"
+                    class="category-card"
+                    onclick="filterProducts('Jeans')">
+
+                    <div class="category-image jeans-image"></div>
+
+                    <div class="category-overlay">
+
+                        <span>JEANS</span>
+
+                        <strong>
+                            Explore →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#shop"
+                    class="category-card"
+                    onclick="filterProducts('Jackets')">
+
+                    <div class="category-image jackets-image"></div>
+
+                    <div class="category-overlay">
+
+                        <span>JACKETS</span>
+
+                        <strong>
+                            Explore →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#shop"
+                    class="category-card"
+                    onclick="filterProducts('Shoes')">
+
+                    <div class="category-image shoes-image"></div>
+
+                    <div class="category-overlay">
+
+                        <span>SHOES</span>
+
+                        <strong>
+                            Explore →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#shop"
+                    class="category-card"
+                    onclick="filterProducts('Bags')">
+
+                    <div class="category-image bags-image"></div>
+
+                    <div class="category-overlay">
+
+                        <span>BAGS</span>
+
+                        <strong>
+                            Explore →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#shop"
+                    class="category-card"
+                    onclick="filterProducts('Accessories')">
+
+                    <div class="category-image accessories-image"></div>
+
+                    <div class="category-overlay">
+
+                        <span>ACCESSORIES</span>
+
+                        <strong>
+                            Explore →
+                        </strong>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEW ARRIVALS
+        ========================== -->
+
+        <section
+            id="new"
+            class="section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        JUST IN
+                    </p>
+
+                    <h2>
+                        New Arrivals
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#shop"
+                    class="text-link"
+                    onclick="filterProducts('All')">
+
+                    View all →
+
+                </a>
+
+            </div>
+
+            <div
+                id="new-products"
+                class="product-grid">
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROMO
+        ========================== -->
+
+        <section class="promo">
+
+            <div class="promo-image"></div>
+
+            <div class="promo-content">
+
+                <p class="eyebrow">
+                    LUNA EDIT
+                </p>
+
+                <h2>
+                    Effortless.<br>
+                    Every day.
+                </h2>
+
+                <p>
+                    Pieces designed to move with you,
+                    from morning to evening.
+                </p>
+
+                <a
+                    href="#shop"
+                    class="btn btn-dark">
+
+                    Discover the edit
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BEST SELLERS
+        ========================== -->
+
+        <section
+            id="bestsellers"
+            class="section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        MOST WANTED
+                    </p>
+
+                    <h2>
+                        Best Sellers
+                    </h2>
+
+                </div>
+
+                <a
+                    href="#shop"
+                    class="text-link">
+
+                    Shop all →
+
+                </a>
+
+            </div>
+
+            <div
+                id="best-products"
+                class="product-grid">
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SHOP
+        ========================== -->
+
+        <section
+            id="shop"
+            class="section shop-section">
+
+            <div class="section-header shop-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        THE COLLECTION
+                    </p>
+
+                    <h2>
+                        Shop
+                    </h2>
+
+                </div>
+
+
+                <div class="shop-tools">
+
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            id="shop-search"
+                            placeholder="Search products..."
+                            oninput="searchProducts()">
+
+                    </div>
+
+
+                    <select
+                        id="sort-products"
+                        onchange="sortProducts()">
+
+                        <option value="default">
+                            Recommended
+                        </option>
+
+                        <option value="newest">
+                            Newest
+                        </option>
+
+                        <option value="low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high">
+                            Price: High to Low
+                        </option>
+
+                        <option value="best">
+                            Best Selling
+                        </option>
+
+                        <option value="name">
+                            Name
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    onclick="filterProducts('All', this)">
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('Dresses', this)">
+                    Dresses
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('Tops', this)">
+                    Tops
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('Jeans', this)">
+                    Jeans
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('Jackets', this)">
+                    Jackets
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('Shoes', this)">
+                    Shoes
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('Bags', this)">
+                    Bags
+                </button>
+
+                <button
+                    class="filter"
+                    onclick="filterProducts('Accessories', this)">
+                    Accessories
+                </button>
+
+            </div>
+
+
+            <div
+                id="product-grid"
+                class="product-grid">
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SALE
+        ========================== -->
+
+        <section
+            id="sale"
+            class="sale-banner">
+
+            <div>
+
+                <p class="eyebrow">
+                    LIMITED TIME
+                </p>
+
+                <h2>
+                    Up to 30% off selected styles.
+                </h2>
+
+                <p>
+                    Discover your next favourite piece.
+                </p>
+
+                <a
+                    href="#shop"
+                    class="btn btn-light">
+
+                    Shop Sale
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            id="about"
+            class="brand-section">
+
+            <div class="brand-content">
+
+                <p class="eyebrow">
+                    ABOUT LUNA
+                </p>
+
+                <h2>
+                    Fashion that feels like you.
+                </h2>
+
+                <p>
+                    LUNA is a modern fashion brand created
+                    for women who appreciate simplicity,
+                    confidence and timeless style.
+                </p>
+
+                <a
+                    href="#shop"
+                    class="text-link">
+
+                    Explore LUNA →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact" class="contact-section">
+
+            <div class="contact-content">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h2>Contact LUNA.</h2>
+                <p>Questions about an order, sizing or our collections? We are here to help.</p>
+
+                <div class="contact-details">
+                    <div>
+                        <span>Email</span>
+                        <a href="mailto:hello@lunastore.com">hello@lunastore.com</a>
+                    </div>
+                    <div>
+                        <span>WhatsApp</span>
+                        <a href="https://wa.me/212600000000" target="_blank" rel="noopener">Chat with us</a>
+                    </div>
+                    <div>
+                        <span>Customer Service</span>
+                        <strong>Mon–Sat · 9:00–18:00</strong>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" onsubmit="submitContactForm(event)">
+                <input type="text" id="contact-name" placeholder="Full Name" required>
+                <input type="email" id="contact-email" placeholder="Email" required>
+                <input type="text" id="contact-subject" placeholder="Subject" required>
+                <textarea id="contact-message" placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-dark">Send Message</button>
+            </form>
+
+        </section>
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+
+        <section class="newsletter">
+
+            <p class="eyebrow">
+                STAY IN THE LOOP
+            </p>
+
+            <h2>
+                Get the latest from LUNA.
+            </h2>
+
+            <p>
+                New collections, exclusive offers and inspiration.
+            </p>
+
+            <form onsubmit="subscribeNewsletter(event)">
+
+                <input
+                    type="email"
+                    id="newsletter-email"
+                    placeholder="Your email address"
+                    required>
+
+                <button
+                    type="submit"
+                    class="btn btn-dark">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         SEARCH MODAL
+    ========================== -->
+
+    <div
+        id="search-modal"
+        class="modal">
+
+        <div class="modal-box search-modal-box">
+
+            <button
+                class="close"
+                onclick="closeSearch()">
+                ×
+            </button>
+
+            <p class="eyebrow">
+                SEARCH
+            </p>
+
+            <h2>
+                What are you looking for?
+            </h2>
+
+            <input
+                type="text"
+                id="modal-search"
+                class="big-search"
+                placeholder="Search dresses, jackets, shoes..."
+                oninput="searchFromModal()">
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PRODUCT DETAILS
+    ========================== -->
+
+    <div
+        id="product-modal"
+        class="modal">
+
+        <div class="modal-box product-details">
+
+            <button
+                class="close"
+                onclick="closeProduct()">
+                ×
+            </button>
+
+            <div class="details-image">
+
+                <img
+                    id="details-image"
+                    src=""
+                    alt="Product">
+
+            </div>
+
+
+            <div class="details-content">
+
+                <p
+                    id="details-category"
+                    class="eyebrow">
+                </p>
+
+                <h2 id="details-name"></h2>
+
+                <p
+                    id="details-price"
+                    class="details-price">
+                </p>
+
+                <p
+                    id="details-stock"
+                    class="details-stock">
+                </p>
+
+                <p
+                    id="details-description"
+                    class="details-description">
+                </p>
+
+
+                <div class="detail-group">
+
+                    <label>
+                        Color
+                    </label>
+
+                    <div
+                        id="color-options"
+                        class="options">
+                    </div>
+
+                </div>
+
+
+                <div class="detail-group">
+
+                    <label>
+                        Size
+                    </label>
+
+                    <div
+                        id="size-options"
+                        class="options">
+                    </div>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <label>
+                        Quantity
+                    </label>
+
+                    <div class="quantity-control">
+
+                        <button onclick="changeQuantity(-1)">
+                            −
+                        </button>
+
+                        <span id="quantity">
+                            1
+                        </span>
+
+                        <button onclick="changeQuantity(1)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="add-to-bag-button"
+                    class="btn btn-dark full"
+                    onclick="addSelectedToCart()">
+
+                    Add to Bag
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CART
+    ========================== -->
+
+    <div
+        id="cart-modal"
+        class="modal">
+
+        <div class="modal-box cart-box">
+
+            <button
+                class="close"
+                onclick="closeCart()">
+                ×
+            </button>
+
+            <p class="eyebrow">
+                YOUR SHOPPING BAG
+            </p>
+
+            <h2>
+                Your Bag
+            </h2>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-summary">
+
+                <div>
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="cart-subtotal">
+                        0 DH
+                    </strong>
+                </div>
+
+                <div>
+                    <span>
+                        Shipping
+                    </span>
+
+                    <span>
+                        Calculated at checkout
+                    </span>
+                </div>
+
+                <div class="total-row">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="cart-total">
+                        0 DH
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="btn btn-dark full"
+                onclick="checkout()">
+
+                Checkout
+
+            </button>
+
+
+            <button
+                class="whatsapp-btn full"
+                onclick="orderOnWhatsApp()">
+
+                Order via WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         WISHLIST
+    ========================== -->
+
+    <div
+        id="wishlist-modal"
+        class="modal">
+
+        <div class="modal-box wishlist-box">
+
+            <button
+                class="close"
+                onclick="closeWishlist()">
+                ×
+            </button>
+
+            <p class="eyebrow">
+                SAVED FOR LATER
+            </p>
+
+            <h2>
+                Wishlist
+            </h2>
+
+            <div id="wishlist-items"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CHECKOUT
+    ========================== -->
+
+    <div
+        id="checkout-modal"
+        class="modal">
+
+        <div class="modal-box checkout-box">
+
+            <button
+                class="close"
+                onclick="closeCheckout()">
+                ×
+            </button>
+
+            <p class="eyebrow">
+                CHECKOUT
+            </p>
+
+            <h2>
+                Complete your order
+            </h2>
+
+
+            <form
+                id="checkout-form"
+                onsubmit="placeOrder(event)">
+
+                <div class="checkout-grid">
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="checkout-name"
+                            placeholder="Your full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="checkout-phone"
+                            placeholder="+212 ..."
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="checkout-email"
+                        placeholder="your@email.com"
+                        required>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label>
+                        Address
+                    </label>
+
+                    <input
+                        type="text"
+                        id="checkout-address"
+                        placeholder="Street address"
+                        required>
+
+                </div>
+
+
+                <div class="checkout-grid">
+
+                    <div class="checkout-field">
+
+                        <label>
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="checkout-city"
+                            placeholder="Casablanca"
+                            required>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Postal Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="checkout-postal"
+                            placeholder="20000"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label>
+                        Payment Method
+                    </label>
+
+                    <select
+                        id="payment-method"
+                        required>
+
+                        <option value="">
+                            Select payment method
+                        </option>
+
+                        <option value="cod">
+                            Cash on Delivery
+                        </option>
+
+                        <option value="card">
+                            Credit / Debit Card
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="checkout-summary">
+
+                    <h3>
+                        Order Summary
+                    </h3>
+
+                    <div id="checkout-items"></div>
+
+                    <div class="checkout-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="checkout-total">
+                            0 DH
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-dark full">
+
+                    Place Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ACCOUNT
+    ========================== -->
+
+    <div
+        id="account-modal"
+        class="modal">
+
+        <div class="modal-box account-box">
+
+            <button
+                class="close"
+                onclick="closeAccount()">
+                ×
+            </button>
+
+
+            <!-- LOGIN -->
+
+            <div id="login-section">
+
+                <p class="eyebrow">
+                    WELCOME BACK
+                </p>
+
+                <h2>
+                    Login
+                </h2>
+
+
+                <form onsubmit="loginUser(event)">
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="login-email"
+                            placeholder="your@email.com"
+                            required>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="login-password"
+                            placeholder="Your password"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-dark full">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+
+                <p class="account-switch">
+
+                    Don't have an account?
+
+                    <button onclick="showRegister()">
+                        Create account
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- REGISTER -->
+
+            <div
+                id="register-section"
+                style="display:none;">
+
+                <p class="eyebrow">
+                    JOIN LUNA
+                </p>
+
+                <h2>
+                    Create Account
+                </h2>
+
+
+                <form onsubmit="registerUser(event)">
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="register-name"
+                            placeholder="Your full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="register-email"
+                            placeholder="your@email.com"
+                            required>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="register-password"
+                            placeholder="Create a password"
+                            minlength="6"
+                            required>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-dark full">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+
+                <p class="account-switch">
+
+                    Already have an account?
+
+                    <button onclick="showLogin()">
+                        Login
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div
+                id="profile-section"
+                style="display:none;">
+
+                <p class="eyebrow">
+                    MY ACCOUNT
+                </p>
+
+                <h2 id="profile-name">
+                    Welcome
+                </h2>
+
+
+                <div class="profile-info">
+
+                    <div class="profile-row">
+
+                        <span>
+                            Name
+                        </span>
+
+                        <strong id="profile-full-name"></strong>
+
+                    </div>
+
+
+                    <div class="profile-row">
+
+                        <span>
+                            Email
+                        </span>
+
+                        <strong id="profile-email"></strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn btn-dark full"
+                    onclick="logoutUser()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ADMIN
+    ========================== -->
+
+    <div
+        id="admin-modal"
+        class="modal">
+
+        <div class="admin-box">
+
+            <button
+                class="close admin-close"
+                onclick="closeAdmin()">
+                ×
+            </button>
+
+
+            <aside class="admin-sidebar">
+
+                <div class="admin-logo">
+
+                    LUNA
+
+                    <span>
+                        ADMIN
+                    </span>
+
+                </div>
+
+
+                <button
+                    class="admin-menu active"
+                    onclick="showAdminPage('dashboard', this)">
+
+                    Dashboard
+
+                </button>
+
+
+                <button
+                    class="admin-menu"
+                    onclick="showAdminPage('products', this)">
+
+                    Products
+
+                </button>
+
+
+                <button
+                    class="admin-menu"
+                    onclick="showAdminPage('inventory', this)">
+
+                    Inventory
+
+                </button>
+
+
+                <button
+                    class="admin-menu"
+                    onclick="showAdminPage('orders', this)">
+
+                    Orders
+
+                </button>
+
+
+                <button
+                    class="admin-menu"
+                    onclick="showAdminPage('customers', this)">
+
+                    Customers
+
+                </button>
+
+            </aside>
+
+
+            <main class="admin-main">
+
+
+                <!-- ADMIN DASHBOARD -->
+
+                <section
+                    id="admin-dashboard"
+                    class="admin-page">
+
+                    <p class="eyebrow">
+                        LUNA STORE
+                    </p>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+
+                    <div class="admin-stats">
+
+                        <div class="admin-stat">
+
+                            <span>
+                                Products
+                            </span>
+
+                            <strong id="admin-product-count">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-stat">
+
+                            <span>
+                                Orders
+                            </span>
+
+                            <strong id="admin-order-count">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-stat">
+
+                            <span>
+                                Customers
+                            </span>
+
+                            <strong id="admin-customer-count">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="admin-stat">
+
+                            <span>
+                                Revenue
+                            </span>
+
+                            <strong id="admin-revenue">
+                                0 DH
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-welcome">
+
+                        <p class="eyebrow">
+                            WELCOME
+                        </p>
+
+                        <h2>
+                            Manage your LUNA store.
+                        </h2>
+
+                        <p>
+                            Manage products, inventory and orders
+                            from one place.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PRODUCTS -->
+
+                <section
+                    id="admin-products"
+                    class="admin-page"
+                    style="display:none;">
+
+                    <div class="admin-page-header">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                CATALOG
+                            </p>
+
+                            <h1>
+                                Products
+                            </h1>
+
+                        </div>
+
+
+                        <button
+                            class="btn btn-dark"
+                            onclick="openAddProduct()">
+
+                            + Add Product
+
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="admin-product-list"
+                        class="admin-product-list">
+                    </div>
+
+                </section>
+
+
+                <!-- INVENTORY -->
+
+                <section
+                    id="admin-inventory"
+                    class="admin-page"
+                    style="display:none;">
+
+                    <p class="eyebrow">
+                        STOCK CONTROL
+                    </p>
+
+                    <h1>
+                        Inventory
+                    </h1>
+
+
+                    <div
+                        id="admin-inventory-list"
+                        class="inventory-list">
+                    </div>
+
+                </section>
+
+
+                <!-- ORDERS -->
+
+                <section
+                    id="admin-orders"
+                    class="admin-page"
+                    style="display:none;">
+
+                    <p class="eyebrow">
+                        STORE
+                    </p>
+
+                    <h1>
+                        Orders
+                    </h1>
+
+
+                    <div
+                        id="admin-order-list"
+                        class="empty-admin">
+
+                        <h3>
+                            No orders yet
+                        </h3>
+
+                        <p>
+                            Customer orders will appear here.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CUSTOMERS -->
+
+                <section
+                    id="admin-customers"
+                    class="admin-page"
+                    style="display:none;">
+
+                    <p class="eyebrow">
+                        STORE
+                    </p>
+
+                    <h1>
+                        Customers
+                    </h1>
+
+
+                    <div
+                        id="admin-customer-list"
+                        class="empty-admin">
+
+                        <h3>
+                            No customers yet
+                        </h3>
+
+                        <p>
+                            Registered customers will appear here.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ADD PRODUCT
+    ========================== -->
+
+    <div
+        id="add-product-modal"
+        class="modal">
+
+        <div class="modal-box add-product-box">
+
+            <button
+                class="close"
+                onclick="closeAddProduct()">
+                ×
+            </button>
+
+            <p class="eyebrow">
+                PRODUCT MANAGEMENT
+            </p>
+
+            <h2>
+                Add Product
+            </h2>
+
+
+            <form onsubmit="addAdminProduct(event)">
+
+                <div class="checkout-field">
+
+                    <label>
+                        Product Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="admin-product-name"
+                        placeholder="Example: Satin Dress"
+                        required>
+
+                </div>
+
+
+                <div class="checkout-grid">
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Category
+                        </label>
+
+                        <select
+                            id="admin-product-category"
+                            required>
+
+                            <option value="">
+                                Select category
+                            </option>
+
+                            <option value="Dresses">
+                                Dresses
+                            </option>
+
+                            <option value="Tops">
+                                Tops
+                            </option>
+
+                            <option value="Jeans">
+                                Jeans
+                            </option>
+
+                            <option value="Jackets">
+                                Jackets
+                            </option>
+
+                            <option value="Shoes">
+                                Shoes
+                            </option>
+
+                            <option value="Bags">
+                                Bags
+                            </option>
+
+                            <option value="Accessories">
+                                Accessories
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Price
+                        </label>
+
+                        <input
+                            type="number"
+                            id="admin-product-price"
+                            placeholder="399"
+                            min="1"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label>
+                        Image URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="admin-product-image"
+                        placeholder="https://..."
+                        required>
+
+                </div>
+
+
+                <div class="checkout-field">
+
+                    <label>
+                        Description
+                    </label>
+
+                    <input
+                        type="text"
+                        id="admin-product-description"
+                        placeholder="Describe the product..."
+                        required>
+
+                </div>
+
+
+                <div class="checkout-grid">
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Initial Stock
+                        </label>
+
+                        <input
+                            type="number"
+                            id="admin-product-stock"
+                            min="0"
+                            value="10"
+                            required>
+
+                    </div>
+
+
+                    <div class="checkout-field">
+
+                        <label>
+                            Color
+                        </label>
+
+                        <input
+                            type="text"
+                            id="admin-product-color"
+                            value="Black"
+                            placeholder="Black"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-dark full">
+
+                    Add Product
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="footer-logo">
+                    LUNA
+                </div>
+
+                <p>
+                    Modern fashion for modern lives.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a
+                    href="#shop"
+                    onclick="filterProducts('Dresses')">
+                    Dresses
+                </a>
+
+                <a
+                    href="#shop"
+                    onclick="filterProducts('Tops')">
+                    Tops
+                </a>
+
+                <a
+                    href="#shop"
+                    onclick="filterProducts('Jeans')">
+                    Jeans
+                </a>
+
+                <a
+                    href="#shop"
+                    onclick="filterProducts('Jackets')">
+                    Jackets
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Help
+                </h4>
+
+                <a href="#contact">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    Shipping
+                </a>
+
+                <a href="#">
+                    Returns
+                </a>
+
+                <a href="#">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h4>
+                    Follow
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    TikTok
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 LUNA STORE
+            </span>
+
+            <span>
+                All rights reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ADMIN DEMO BUTTON -->
+
+    <button
+        class="admin-launch"
+        onclick="openAdmin()"
+        title="Admin Dashboard">
+
+        ⚙
+
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
