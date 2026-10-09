@@ -8,7 +8,7 @@
    SETTINGS
 ========================================================= */
 
-// بدلي هاد الرقم برقم WhatsApp ديالك
+
 const WHATSAPP_NUMBER = "212600000000";
 
 const ADMIN_EMAIL = "admin@lunastore.com";
